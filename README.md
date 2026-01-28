@@ -15,15 +15,19 @@ Python 3
 
 ## Methodology: ##
     The system relies on a specific pipeline
-    - PreProcessing chain to ensure robustness against lighting changes.(Gamma Correction, DoG, Masking, Contrast Equalization.... You know ,the usual stuff)
+    - PreProcessing chain to ensure robustness against lighting changes.
+    - Gamma Correction
+    - DoG
+    - Masking
+    - Contrast Equalization.... You know ,the usual stuff
     - Feature Extraction using LTP(cus LBP is kinda stupid)
     - Matching & Classification using KNN
 
 ## Usage Instructions ##
  ** Step 1: Offline Indexation **
- just run "python 3 Mini Project LTP+PP/Offilne Indexation.py"
- This step processes the raw images, saves the pre-processed versions to disk, calculates their LTP features, and stores them in a JSON database.Ensure your raw images are in a folder named Faces in the same directory as the script.
+ - just run "python 3 Mini Project LTP+PP/Offilne Indexation.py"
+ - This step processes the raw images, saves the pre-processed versions to disk, calculates their LTP features, and stores them in a JSON database.Ensure your raw images are in a folder named Faces in the same directory as the script.
 
  **Step 2: Online Evaluation **
-just run "python 3 Mini Project LTP+PP/Online_Indexation.py"
-This step simulates a retrieval scenario. It takes specific test images (currently configured for images 8, 9, and 10 of specific subjects), treats them as "unknown" queries, and attempts to recognize them against the index.json database.
+- just run "python 3 Mini Project LTP+PP/Online_Indexation.py"
+- This step simulates a retrieval scenario. It takes specific test images (currently configured for images 8, 9, and 10 of specific subjects), treats them as "unknown" queries, and attempts to recognize them against the index.json database.
